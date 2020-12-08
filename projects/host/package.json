@@ -1,0 +1,31 @@
+{
+  "name": "esm-host",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "snowpack dev",
+    "build": "snowpack build",
+    "start": "serve ./dist --cors -p 3001",
+    "snowpack": "snowpack"
+  },
+  "devDependencies": {
+    "@efox/emp-tsconfig": "^1.1.3",
+    "@efox/eslint-config-react-prittier-ts": "^1.2.3",
+    "@snowpack/plugin-babel": "^2.1.5",
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-react-refresh": "^2.3.8",
+    "@snowpack/plugin-typescript": "^1.1.1",
+    "@snowpack/plugin-webpack": "^2.1.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.6",
+    "cross-env": "^7.0.3",
+    "snowpack": "^2.18.2",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "antd": "^4.9.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

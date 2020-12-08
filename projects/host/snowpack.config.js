@@ -8,13 +8,13 @@ module.exports = {
   },
   plugins: [
     /* ... */
-    '@snowpack/plugin-react-refresh',
+    /* '@snowpack/plugin-react-refresh',
     [
       '@snowpack/plugin-webpack',
       {
         extendConfig: WebpackConfigFN,
       },
-    ],
+    ], */
     ['@snowpack/plugin-dotenv', {}],
     /* '@snowpack/plugin-typescript',
     [
@@ -27,18 +27,19 @@ module.exports = {
       },
     ], */
   ],
-  install: [
-    /* ... */
-  ],
+  // install: [],
   installOptions: {
-    /* ... */
+    dest:'web_modules',
+    treeshake:true,
+    installTypes:true
   },
   devOptions: {
-    /* ... */
+    port:3001,
+    out:'dist'
   },
-  buildOptions: {
-    /* ... */
-  },
+   buildOptions: {
+    clean:true
+   },
   proxy: {
     /* ... */
   },
