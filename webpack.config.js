@@ -1,4 +1,4 @@
-module.exports = (config) => {
-  console.log(config)
-  return config;
+module.exports = config => {
+  console.log(JSON.stringify(config, null, 2))
+  return config
 }
