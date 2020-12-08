@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "snowpack dev",
     "build": "snowpack build",
-    "start": "serve ./build -p 8080",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1"
+    "start": "serve ./dist -p 3002",
+    "snowpack": "esnowpack"
   },
   "devDependencies": {
     "@efox/emp-tsconfig": "^1.1.3",

@@ -16,7 +16,8 @@ module.exports = {
       },
     ], */
     ['@snowpack/plugin-dotenv', {}],
-    /* '@snowpack/plugin-typescript',
+    ['@snowpack/plugin-typescript',{args:'--project ./'}]
+    /* 
     [
       '@snowpack/plugin-babel',
       {
@@ -38,12 +39,9 @@ module.exports = {
     out:'dist'
   },
    buildOptions: {
-    clean:true
+    clean:true,
+    sourceMaps:true
    },
-  proxy: {
-    /* ... */
-  },
-  alias: {
-    /* ... */
-  },
+  proxy: {},
+  alias: {},
 }
