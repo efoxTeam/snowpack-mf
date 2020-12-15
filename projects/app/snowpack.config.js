@@ -12,7 +12,7 @@ module.exports = {
     /* ... */
     // '@snowpack/plugin-react-refresh',
     [
-      '@snowpack/plugin-webpack',
+      '@efox/plugin-webpack5',
       {
         extendConfig: WebpackConfigFN,
       },
