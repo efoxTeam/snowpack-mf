@@ -1,8 +1,10 @@
 const WebpackConfigFN = require('./webpack.config')
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  experiments: {
+    source: 'skypack',
+  },
   mount: {
-    /* ... */
     public: '/',
     src: '/_dist_',
   },
@@ -16,7 +18,7 @@ module.exports = {
       },
     ], */
     ['@snowpack/plugin-dotenv', {}],
-    ['@snowpack/plugin-typescript',{args:'--project ./'}]
+    // ['@snowpack/plugin-typescript', {args: '--project ./'}],
     /* 
     [
       '@snowpack/plugin-babel',
@@ -30,18 +32,18 @@ module.exports = {
   ],
   // install: [],
   installOptions: {
-    dest:'web_modules',
-    treeshake:true,
-    installTypes:true
+    dest: 'web_modules',
+    treeshake: true,
+    installTypes: true,
   },
   devOptions: {
-    port:3001,
-    out:'dist'
+    port: 3001,
+    out: 'dist',
   },
-   buildOptions: {
-    clean:true,
-    sourceMaps:true
-   },
+  buildOptions: {
+    clean: true,
+    sourceMaps: true,
+  },
   proxy: {},
   alias: {},
 }

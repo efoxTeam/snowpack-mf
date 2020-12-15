@@ -1,20 +1,22 @@
 const WebpackConfigFN = require('./webpack.config')
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  experiments: {
+    source: 'local',
+  },
   mount: {
-    /* ... */
     public: '/',
     src: '/_dist_',
   },
   plugins: [
     /* ... */
-    /* '@snowpack/plugin-react-refresh',
+    // '@snowpack/plugin-react-refresh',
     [
       '@snowpack/plugin-webpack',
       {
         extendConfig: WebpackConfigFN,
       },
-    ], */
+    ],
     ['@snowpack/plugin-dotenv', {}],
     /* '@snowpack/plugin-typescript',
     [
@@ -31,13 +33,13 @@ module.exports = {
     /* ... */
   ],
   installOptions: {
-    dest:'web_modules',
-    treeshake:true,
-    installTypes:true
+    dest: 'web_modules',
+    treeshake: true,
+    installTypes: true,
   },
   devOptions: {
-    port:3002,
-    out:'dist'
+    port: 3002,
+    out: 'dist',
   },
   buildOptions: {
     /* ... */
@@ -46,7 +48,7 @@ module.exports = {
     /* ... */
   },
   alias: {
-    'react':'http://localhost:3001/web_modules/react.js',
-    'react-dom':'http://localhost:3001/web_modules/react-dom.js'
+    // react: 'http://localhost:3001/web_modules/react.js',
+    // 'react-dom': 'http://localhost:3001/web_modules/react-dom.js',
   },
 }

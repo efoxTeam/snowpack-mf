@@ -1,5 +1,5 @@
-import React from 'http://localhost:3001/web_modules/react.js'
-import ReactDOM from 'http://localhost:3001/web_modules/react-dom.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import App from './App.jsx'
 ReactDOM.render(

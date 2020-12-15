@@ -1,10 +1,12 @@
-import React from 'http://localhost:3001/web_modules/react.js'
-
+import React from 'react'
+import {Button, DatePicker} from 'antd'
+import 'antd/dist/antd.css'
 function App(): any {
-
   return (
     <div className="App">
-      <h1>react app</h1>
+      <h1>App Without NPM</h1>
+      <Button type="primary">PRESS ME</Button>
+      <DatePicker placeholder="select date" />
     </div>
   )
 }
