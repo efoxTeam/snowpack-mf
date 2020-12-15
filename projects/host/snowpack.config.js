@@ -1,22 +1,24 @@
 const WebpackConfigFN = require('./webpack.config')
-/** @type {import("snowpack").SnowpackUserConfig } */
+const port = 3001
+const host = `http://localhost:${port}`
 module.exports = {
   experiments: {
-    source: 'skypack',
+    source: 'local',
   },
   mount: {
-    public: '/',
+    public: `/`,
     src: '/_dist_',
   },
   plugins: [
-    /* ... */
-    /* '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-sass',
+    ,
     [
-      '@snowpack/plugin-webpack',
+      '@efox/snowpack-plugin-webpack5',
       {
         extendConfig: WebpackConfigFN,
       },
-    ], */
+    ],
     ['@snowpack/plugin-dotenv', {}],
     // ['@snowpack/plugin-typescript', {args: '--project ./'}],
     /* 
@@ -37,12 +39,13 @@ module.exports = {
     installTypes: true,
   },
   devOptions: {
-    port: 3001,
+    port,
     out: 'dist',
   },
   buildOptions: {
     clean: true,
     sourceMaps: true,
+    baseUrl: `${host}/`,
   },
   proxy: {},
   alias: {},

@@ -1,25 +1,26 @@
 const WebpackConfigFN = require('./webpack.config')
-/** @type {import("snowpack").SnowpackUserConfig } */
+const port = 3002
+const host = `http://localhost:${port}`
 module.exports = {
   experiments: {
     source: 'local',
   },
   mount: {
-    public: '/',
+    public: {url: `/`},
     src: '/_dist_',
   },
   plugins: [
-    /* ... */
-    // '@snowpack/plugin-react-refresh',
-    [
-      '@efox/plugin-webpack5',
+    '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-sass',
+    /* [
+      '@efox/snowpack-plugin-webpack5',
       {
         extendConfig: WebpackConfigFN,
       },
-    ],
+    ], */
     ['@snowpack/plugin-dotenv', {}],
-    /* '@snowpack/plugin-typescript',
-    [
+    // ['@snowpack/plugin-typescript', {args: '--project ./'}],
+    /*[
       '@snowpack/plugin-babel',
       {
         input: ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
@@ -38,16 +39,20 @@ module.exports = {
     installTypes: true,
   },
   devOptions: {
-    port: 3002,
+    port,
     out: 'dist',
+    fallback: 'index.html',
   },
   buildOptions: {
-    /* ... */
+    clean: true,
+    sourceMaps: true,
+    baseUrl: `${host}/`,
   },
   proxy: {
     /* ... */
   },
   alias: {
+    'host/logo': `http://localhost:3001/_dist_/Logo.js`,
     // react: 'http://localhost:3001/web_modules/react.js',
     // 'react-dom': 'http://localhost:3001/web_modules/react-dom.js',
   },

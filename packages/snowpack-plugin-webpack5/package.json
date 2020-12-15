@@ -1,5 +1,5 @@
 {
-  "name": "@efox/plugin-webpack5",
+  "name": "@efox/snowpack-plugin-webpack5",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ken.xu",

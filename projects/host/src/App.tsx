@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import logo from './logo.svg'
+import Logo from './Logo'
 import './App.css'
 import ANTD from './ANTD'
 function App(): any {
@@ -14,9 +14,9 @@ function App(): any {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo />
         <p>
-          Page has been open for <code>{count}</code> seconds.!
+          Page has been open for <code>{count}</code> seconds.
         </p>
       </header>
       <ANTD />
