@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Logo from './Logo'
 import './App.css'
 import ANTD from './ANTD'
+console.log('import.meta.env', import.meta.env)
 function App(): any {
   // Create the count state.
   const [count, setCount] = useState(0)

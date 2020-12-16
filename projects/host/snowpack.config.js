@@ -1,4 +1,5 @@
 const WebpackConfigFN = require('./webpack.config')
+console.log('process', process.env)
 const port = 3001
 const host = `http://localhost:${port}`
 module.exports = {
@@ -6,8 +7,8 @@ module.exports = {
     source: 'local',
   },
   mount: {
-    public: `/`,
-    src: '/_dist_',
+    public: {url: `/`, resolve: true},
+    src: `/_dist_`,
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
