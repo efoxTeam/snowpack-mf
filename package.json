@@ -10,8 +10,8 @@
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
   },
   "scripts": {
-    "dev": "pnpm run --filter esm-* --parallel dev",
-    "build": "pnpm run --filter esm-* --parallel build",
-    "start": "pnpm run --filter esm-* --parallel start"
+    "dev": "pnpm run --filter={app,host} --parallel dev",
+    "build": "pnpm run --filter={app,host} --parallel build",
+    "start": "pnpm run --filter={app,host} --parallel start"
   }
 }
