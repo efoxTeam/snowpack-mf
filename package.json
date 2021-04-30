@@ -1,6 +1,6 @@
 {
   "name": "esm-mf",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/efoxTeam/snowpack-mf.git",
