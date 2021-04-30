@@ -6,14 +6,12 @@
   "repository": "https://github.com/efoxTeam/snowpack-mf.git",
   "author": "xuhongbin <xuhongbin@yy.com>",
   "license": "MIT",
-  "dependencies": {
-    "lerna": "^3.22.1"
-  },
-  "workspaces": [
-    "projects/*",
-    "packages/*"
-  ],
   "devDependencies": {
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
+  },
+  "scripts": {
+    "dev": "pnpm run --filter esm-* --parallel dev",
+    "build": "pnpm run --filter esm-* --parallel build",
+    "start": "pnpm run --filter esm-* --parallel start"
   }
 }

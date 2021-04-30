@@ -2,9 +2,9 @@ const WebpackConfigFN = require('./webpack.config')
 const port = 3002
 const host = `http://localhost:${port}`
 module.exports = {
-  experiments: {
-    source: 'local',
-  },
+  // experiments: {
+  //   source: 'local',
+  // },
   mount: {
     public: {url: `/`},
     src: '/_dist_',
@@ -30,27 +30,25 @@ module.exports = {
       },
     ], */
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
+  // install: [],
+  packageOptions: {
     dest: 'web_modules',
-    treeshake: true,
     installTypes: true,
+  },
+  optimize: {
+    treeshake: true,
   },
   devOptions: {
     port,
     out: 'dist',
-    fallback: 'index.html',
+    // fallback: 'index.html',
   },
   buildOptions: {
     clean: true,
-    sourceMaps: true,
+    sourcemap: true,
     baseUrl: `${host}/`,
   },
-  proxy: {
-    /* ... */
-  },
+  // proxy: {},
   alias: {
     'host/logo': `http://localhost:3001/_dist_/Logo.js`,
     // react: 'http://localhost:3001/web_modules/react.js',

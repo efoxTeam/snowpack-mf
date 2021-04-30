@@ -3,9 +3,9 @@ console.log('process', process.env)
 const port = 3001
 const host = `http://localhost:${port}`
 module.exports = {
-  experiments: {
-    source: 'local',
-  },
+  // experiments: {
+  //   source: 'local',
+  // },
   mount: {
     public: {url: `/`, resolve: true},
     src: `/_dist_`,
@@ -14,12 +14,12 @@ module.exports = {
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-sass',
     ,
-    [
-      '@efox/snowpack-plugin-webpack5',
-      {
-        extendConfig: WebpackConfigFN,
-      },
-    ],
+    // [
+    //   '@efox/snowpack-plugin-webpack5',
+    //   {
+    //     extendConfig: WebpackConfigFN,
+    //   },
+    // ],
     ['@snowpack/plugin-dotenv', {}],
     // ['@snowpack/plugin-typescript', {args: '--project ./'}],
     /* 
@@ -34,10 +34,12 @@ module.exports = {
     ], */
   ],
   // install: [],
-  installOptions: {
+  packageOptions: {
     dest: 'web_modules',
-    treeshake: true,
     installTypes: true,
+  },
+  optimize: {
+    treeshake: true,
   },
   devOptions: {
     port,
@@ -45,9 +47,9 @@ module.exports = {
   },
   buildOptions: {
     clean: true,
-    sourceMaps: true,
+    sourcemap: true,
     baseUrl: `${host}/`,
   },
-  proxy: {},
+  // proxy: {},
   alias: {},
 }
