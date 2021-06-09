@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/efoxTeam/snowpack-mf.git",
-  "author": "xuhongbin <xuhongbin@yy.com>",
+  "author": "xuhongbin ",
   "license": "MIT",
   "devDependencies": {
     "@efox/eslint-config-react-prittier-ts": "^1.2.3"
